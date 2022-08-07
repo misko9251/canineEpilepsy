@@ -172,6 +172,7 @@ header p{
 
 .calmContainer{
     background-image: url('/photos/calm.jpg');
+    padding-bottom: 3%;
 }
 
 img{
@@ -191,8 +192,8 @@ img{
     padding: 2%;
     border-radius: 25px;
     margin-left: 5%;
-    position: relative;
-    bottom: 150px;
+    /* position: relative;
+    bottom: 150px; */
     font-weight: bolder;
     text-align: center;
 }
