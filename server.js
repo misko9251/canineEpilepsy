@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const PORT = 2121;
 const homeRouter = require('./routes/home');
 
 require('dotenv').config({path: './config/.env'});
@@ -12,6 +11,6 @@ app.use(express.json());
 
 app.use('/', homeRouter);
 
-app.listen(PORT, () =>{
-    console.log(`Listening on Port ${PORT}`)
+app.listen(process.env.PORT, () =>{
+    console.log(`Listening on Port ${process.env.PORT}`)
 })
