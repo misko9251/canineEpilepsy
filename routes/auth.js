@@ -14,4 +14,4 @@ router.get('/google/callback',
     res.redirect('/petProfile');
   });
 
-module.exports = router
+module.exports = router;

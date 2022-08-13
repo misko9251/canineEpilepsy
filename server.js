@@ -3,6 +3,7 @@ const app = express();
 const passport = require('passport');
 const session = require('express-session');
 const homeRouter = require('./routes/home');
+const petRouter = require('./routes/pet');
 const connectDB = require('./config/db');
 
 require('dotenv').config({path: './config/.env'});
@@ -29,6 +30,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', homeRouter);
+app.use('/petProfile', petRouter);
 app.use('/auth', require('./routes/auth'));
 
 
