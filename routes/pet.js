@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const petController = require('../controllers/pet');
-// const { ensureAuth, ensureGuest } = require('../middleware/auth');
+const { ensureAuth, ensureGuest } = require('../middleware/auth');
 
-router.get('/', petController.getPetPage);
+router.get('/', ensureAuth, petController.getPetPage);
 
 module.exports = router;

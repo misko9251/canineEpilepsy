@@ -15,6 +15,8 @@ router.get('/google/callback',
     res.redirect('/petProfile');
   });
 
+
+
 // Log Out User
 
 router.get('/logout', (req, res) => {
