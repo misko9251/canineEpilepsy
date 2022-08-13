@@ -31,6 +31,10 @@ body {
 ol, ul {
 	list-style: none;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 blockquote, q {
 	quotes: none;
 }
@@ -115,6 +119,8 @@ header p{
 
 .headerSectionMainPage{
     padding: 3%;
+    text-align: center;
+    width: 100%;
 }
 
 /* First Section on Home Page */
@@ -261,9 +267,76 @@ footer{
     font-size: 12px;
 }
 
+/* PetProfile Page */
+
+.petProfileHeaderContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+    font-size: 35px;
+    color: white;
+    font-weight: bolder;
+    background: rgb(30, 40, 42);
+}
+
+.petProfileHeaderContainer p {
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.profileInfoContainer{
+    padding: 3% 20%;
+    height: 100vh;
+    padding-bottom: 3%;
+    margin-bottom: 0;
+    /* background: rgb(227, 227, 227); */
+}
+
+.innerContainer{
+    background: rgb(247, 239, 223);
+    border-radius: 20px;
+    /* height: 100vh; */
+}
+
+.innerContainer h1{
+    text-align: center;
+    padding: 5% 10%;
+    font-size: 25px;
+    color: rgb(30, 40, 42);
+}
+
+.profileInfoContainer form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+}
+
+.profileInfoContainer input{
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.profileInfoContainer input[type=text], .profileInfoContainer input[type=date]{
+    padding-left: 3%;
+    font-size: 15px;
+}
+
+.profileInfoContainer input[type=submit]{
+    margin: 3% 0;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.profileInfoContainer input[type=submit]:hover{
+    background: rgb(214, 210, 210);
+}
+
 /* Media Queries */
 
-@media all and (max-width: 575px){
+/* @media all and (max-width: 575px){
     .headerSectionMainPage{
         width: 100%;
         padding: 0;
@@ -340,4 +413,4 @@ footer{
     nav, footer{
         font-size: 10px;
     }
-}
+} */
