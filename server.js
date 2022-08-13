@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 const passport = require('passport');
-const session = require('express-session');
 const homeRouter = require('./routes/home');
 const petRouter = require('./routes/pet');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db');
+
 
 require('dotenv').config({path: './config/.env'});
 
@@ -22,7 +25,8 @@ app.use(express.json());
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: MongoStore.create({mongoUrl:process.env.MONGO_URI})
   }))
 
 // Set Passport Middleware
