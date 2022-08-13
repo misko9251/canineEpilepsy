@@ -11,7 +11,7 @@ router.get('/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.render('/petProfile');
+    res.redirect('/petProfile');
   });
 
 module.exports = router
