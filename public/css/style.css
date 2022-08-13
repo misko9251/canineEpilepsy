@@ -157,7 +157,7 @@ header p{
 }
 
 .signInForm input::placeholder {
-    padding-left: 3%;
+    padding-left: 1%;
 }
 
 .signInForm input[type=submit] {
