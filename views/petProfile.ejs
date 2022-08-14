@@ -43,12 +43,25 @@
                 <span>Name</span><br><input type="text" placeholder="Dog's name" name="dogName"><br>
                 <span>Breed</span><br><input type="text" placeholder="Dog's breed" name="dogBreed"><br>
                 <span>Birthday</span><br><input type="date" placeholder="YYYY-MM-DD" name="dogBirthday"><br>
-                <span>Gender</span><br><input type="text" placeholder="Dog's gender" name="dogGender"><br>
-                <span>Spayed or Neutered</span><br><input type="text" placeholder="Yes or No" name="dogSpay"><br>
+                <span>Gender</span><br><input list="gender" placeholder="Select One" id="gender-choice" name="dogGender" />
+                <datalist id="gender">
+                    <option value="Male">
+                    <option value="Female">
+                </datalist><br>
+                <span>Spayed or Neutered</span><br><input list="spay" placeholder="Select One" id="spay-choice" name="dogSpay" />
+                <datalist id="spay">
+                    <option value="Yes">
+                    <option value="No">
+                </datalist><br>
+
                 <input type="submit">
             </form>
         </section>
     </section>
+
+
+
+
 
     <h5 id="hide">Hide Me</h5>
 
