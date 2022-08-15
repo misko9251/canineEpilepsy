@@ -29,15 +29,29 @@
         </ul>
     </nav>
 
-    <section class="petProfileHeaderContainer">
-        <section class="petProfileSectionOne">
+    <header class="profileHeader">
+        <!-- <section class="petProfileSectionOne">
             <h1>Welcome to your Pet's Profile, <%= user.firstName %></h1>
             <p>100% Committed to <%= myPet[0].name %>'s Health</p>
-        </section>
+        </section> -->
+    </header>
+    <section class="picAndNameAndBreed">
+        <div class="petProfilePic"><img src="/photos/placeholder.jpeg"></div>
+        <h1 id="petName"><%= myPet[0].name %></h1>
+        <h2><%= myPet[0].breed %></h2>
+        <h3>Owner: <%= user.firstName %></h3>
+        <h3>Birthday: <%= myPet[0].birthday %></h3>
+        <h3>Gender: <%= myPet[0].gender %></h3>
+        <h3>Spayed: <%= myPet[0].spayed %></h3>
     </section>
 
-    <section id="profileInfoContainer" class="profileInfoContainer">
-
+    <section class="petProfileContainer">
+        <section class="fbPost" >
+            <form action="/addPost" method="POST">
+                <textarea type="text" rows="5" cols="83" placeholder="Hi, <%= myPet[0].name %>! What did you do today?"></textarea><br>
+                <input type="submit" value="Post">
+            </form>
+        </section>
     </section>
 
 
