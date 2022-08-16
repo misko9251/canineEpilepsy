@@ -5,9 +5,8 @@ module.exports = {
     getProfilePage: async (req, res) =>{
         try {
             const pet = await Pet.find({userId: req.user.userId});
-            const posts = await Post.find({userId: req.userId});
+            const posts = await Post.find({userId: req.userId}).sort({date: -1});
             res.render('petProfile.ejs', {myPet: pet, user: req.user, myPosts: posts})
-            console.log(posts.length)
         } catch (error) {
             console.log(error)
         }

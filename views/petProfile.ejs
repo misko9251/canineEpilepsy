@@ -54,12 +54,14 @@
             <section>
                 <h1><%= myPet[0].name%>'s Five Latest Posts</h1>
             </section>
-            <% for(let i = 0; i < myPosts.length; i++) { %>
-                <section class="profilePost">
+            <% for(let i = 0; i < myPosts.length; i++){ %>
+                <% if(i < 5) { %>
+                    <section class="profilePost">
                     <p>Aug 2, 2022</p><br>
                     <p><%= myPosts[i].post %></p><br>
                     <i class="fa-solid fa-trash-can"></i>
                 </section>
+                <%}%>
             <% } %>
         </section>
 
