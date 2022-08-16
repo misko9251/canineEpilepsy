@@ -388,9 +388,9 @@ input[type=file]{
 }
 
 .petProfileContainer{
-    height: 100vh;
+    /* height: 100vh; */
     padding: 3% 10%;
-    background-color: rgb(231, 228, 228);
+    background-color: rgb(73, 69, 69);
 }
 .petProfilePic img{
     max-width: inherit;
@@ -403,16 +403,28 @@ input[type=file]{
 .fbPost{
     padding-top: 3%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     border-radius: 5px;
-    height: 100vh;
     background-color: white;
 }
 
 .fbPost input[type=submit]{
-    width: 25%;
+    background-color: rgb(76, 95, 167);
+    color: white;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.profilePost{
+    border: 1px solid black;
+    margin: 2%;
+    padding: 4%;
+    width: 50%;
+    border-radius: 5px;
+}
 
 
 

@@ -47,11 +47,22 @@
 
     <section class="petProfileContainer">
         <section class="fbPost" >
-            <form action="/addPost" method="POST">
-                <textarea type="text" rows="5" cols="83" placeholder="Hi, <%= myPet[0].name %>! What did you do today?"></textarea><br>
+            <form action="/petProfile/addPost" method="POST">
+                <textarea type="text" rows="5" cols="83" placeholder="Hi, <%= myPet[0].name %>! What did you do today?" name="post"></textarea><br>
                 <input type="submit" value="Post">
             </form>
+            <section>
+                <h1><%= myPet[0].name%>'s Five Latest Posts</h1>
+            </section>
+            <% for(let i = 0; i < myPosts.length; i++) { %>
+                <section class="profilePost">
+                    <p>Aug 2, 2022</p><br>
+                    <p><%= myPosts[i].post %></p><br>
+                    <i class="fa-solid fa-trash-can"></i>
+                </section>
+            <% } %>
         </section>
+
     </section>
 
 
