@@ -426,6 +426,10 @@ input[type=file]{
     border-radius: 5px;
 }
 
+.petProfileContainer h1{
+    margin-bottom: 15%;
+}
+
 
 
 /* Media Queries */

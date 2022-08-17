@@ -18,5 +18,14 @@ module.exports = {
         } catch (error) {
             console.log(error)
         }
+    },
+    deletePost: async (req, res) =>{
+        try {
+            await Post.findOneAndDelete({_id: req.body.postIdFromMongo})
+            console.log('Deleted Post')
+            res.json('OK')
+        } catch (error) {
+            console.log(error)
+        }
     }
 }

@@ -30,10 +30,7 @@
     </nav>
 
     <header class="profileHeader">
-        <!-- <section class="petProfileSectionOne">
-            <h1>Welcome to your Pet's Profile, <%= user.firstName %></h1>
-            <p>100% Committed to <%= myPet[0].name %>'s Health</p>
-        </section> -->
+
     </header>
     <section class="picAndNameAndBreed">
         <div class="petProfilePic"><img src="/photos/placeholder.jpeg"></div>
@@ -56,10 +53,10 @@
             </section>
             <% for(let i = 0; i < myPosts.length; i++){ %>
                 <% if(i < 5) { %>
-                    <section class="profilePost">
+                    <section class="profilePost" data-id="<%=myPosts[i]._id%>">
                     <p>Aug 2, 2022</p><br>
                     <p><%= myPosts[i].post %></p><br>
-                    <i class="fa-solid fa-trash-can"></i>
+                    <i id="trash" class="fa-solid fa-trash-can"></i>
                 </section>
                 <%}%>
             <% } %>

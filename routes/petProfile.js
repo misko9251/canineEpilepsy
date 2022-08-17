@@ -5,5 +5,6 @@ const {ensureAuth, ensureGuest} = require('../middleware/auth')
 
 router.get('/', ensureAuth, petProfileRouter.getProfilePage);
 router.post('/addPost', petProfileRouter.addPost);
+router.delete('/deletePost', petProfileRouter.deletePost);
 
 module.exports = router;
