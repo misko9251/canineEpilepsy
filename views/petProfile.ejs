@@ -45,8 +45,8 @@
     <section class="petProfileContainer">
         <section class="fbPost" >
             <form action="/petProfile/addPost" method="POST">
-                <textarea type="text" rows="5" cols="83" placeholder="Hi, <%= myPet[0].name %>! What did you do today?" name="post"></textarea><br>
-                <input type="submit" value="Post">
+                <textarea id="textAreaPost" type="text" rows="5" cols="60" placeholder="Hi, <%= myPet[0].name %>! What did you do today?" name="post" maxlength="100"></textarea><br>
+                <div class="counterAndBtn"><input type="submit" value="Post"><span id="counter">0/100</span></div>
             </form>
             <section>
                 <h1 class="petNamePosts"><%= myPet[0].name%>'s Five Latest Posts</h1>
@@ -58,8 +58,8 @@
             <% for(let i = 0; i < myPosts.length; i++){ %>
                 <% if(i < 5) { %>
                     <section class="profilePost" data-id="<%=myPosts[i]._id%>">
-                    <p>Aug 2, 2022</p><br>
-                    <p><%= myPosts[i].post %></p><br>
+                    <p class="postDate"><%= moment(myPosts[i].date).format('MMMM Do YYYY, h:mm a') %></p><br>
+                    <p class="post"><%= myPosts[i].post %></p><br>
                     <i id="trash" class="fa-solid fa-trash-can"></i>
                 </section>
                 <%}%>

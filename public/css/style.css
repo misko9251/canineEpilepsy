@@ -62,6 +62,9 @@ table {
     font-size: 20px;
     cursor: pointer;
 }
+#trash{
+    cursor: pointer;
+}
 
 nav{
     height: 50px;
@@ -409,13 +412,22 @@ input[type=file]{
     background-color: white;
 }
 
+.counterAndBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .fbPost input[type=submit]{
     background-color: rgb(76, 95, 167);
     color: white;
-    padding: 1% 2%;
+    font-size: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 10%;
+    text-align: center;
+    padding: 1% 0;
 }
 
 .profilePost{
@@ -424,6 +436,7 @@ input[type=file]{
     padding: 4%;
     width: 50%;
     border-radius: 5px;
+    overflow-wrap: break-word;
 }
 
 .petProfileContainer h1{
@@ -446,6 +459,14 @@ input[type=file]{
     font-size: 12px;
     cursor: pointer;
     margin: 0 5%;
+}
+
+.postDate{
+    font-size: 12px;
+}
+
+#textAreaPost::placeholder, #textAreaPost{
+    font-size: 15px;
 }
 
 /* Media Queries */

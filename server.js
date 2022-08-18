@@ -8,7 +8,7 @@ const petProfileRouter = require('./routes/petProfile');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db');
-
+app.locals.moment = require('moment');
 
 require('dotenv').config({path: './config/.env'});
 
