@@ -2,6 +2,11 @@ const deletePost = document.querySelectorAll('.fa-trash-can');
 const message = document.getElementById('textAreaPost');
 const counter = document.getElementById('counter');
 
+if (window.location.href.indexOf("sortOldest") > -1){
+    Array.from(deletePost).forEach((item)=>
+    item.style.display = 'none');
+}
+
 message.addEventListener('input', function(e){
     const target = e.target;
     const maxLength = target.getAttribute('maxlength');
@@ -19,6 +24,7 @@ message.addEventListener('input', function(e){
 Array.from(deletePost).forEach((item)=>{
     item.addEventListener('click', deleteEntry)
 })
+
 
 async function deleteEntry() {
     const postId = this.parentNode.dataset.id
@@ -38,3 +44,4 @@ async function deleteEntry() {
         console.log(error);
     }
 }
+
