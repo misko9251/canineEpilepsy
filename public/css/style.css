@@ -430,7 +430,23 @@ input[type=file]{
     margin-bottom: 15%;
 }
 
+.petNamePosts{
+    text-align: center;
+}
 
+.sort{
+    display: flex;
+}
+
+.oldest, .newest{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3%;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 5%;
+}
 
 /* Media Queries */
 

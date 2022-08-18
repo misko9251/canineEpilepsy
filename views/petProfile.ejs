@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c3a68ff822.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <nav>
@@ -49,7 +49,11 @@
                 <input type="submit" value="Post">
             </form>
             <section>
-                <h1><%= myPet[0].name%>'s Five Latest Posts</h1>
+                <h1 class="petNamePosts"><%= myPet[0].name%>'s Five Latest Posts</h1>
+                <div class="sort">
+                    <a href="/petProfile/sortOldest"><div class="oldest">Sort by Oldest</div></a>
+                    <a href="/petProfile"><div class="newest">Sort by Newest</div></a>
+                </div>
             </section>
             <% for(let i = 0; i < myPosts.length; i++){ %>
                 <% if(i < 5) { %>
