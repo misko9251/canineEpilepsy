@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c3a68ff822.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <nav>
@@ -29,34 +29,7 @@
         </ul>
     </nav>
 
-    <section class="petProfileHeaderContainer">
-        <section class="petProfileSectionOne">
-            <h1>Welcome to your Pet's Profile, <%= user.firstName %></h1>
-            <p>100% Committed to Your Best Friend's Health</p>
-        </section>
-    </section>
 
-    <section id="profileInfoContainer" class="profileInfoContainer">
-        <section class="innerContainer">
-            <h1>We love dogs! Give us the basics about your pup. Then, we will collect your pup's medication information.</h1>
-            <form action="/petEntry/addPetInfo" method="POST">
-                <span>Name</span><br><input type="text" placeholder="Dog's name" name="dogName"><br>
-                <span>Breed</span><br><input type="text" placeholder="Dog's breed" name="dogBreed"><br>
-                <span>Birthday</span><br><input type="date" placeholder="YYYY-MM-DD" name="dogBirthday"><br>
-                <span>Gender</span><br><input list="gender" placeholder="Select One" id="gender-choice" name="dogGender" />
-                <datalist id="gender">
-                    <option value="Male">
-                    <option value="Female">
-                </datalist><br>
-                <span>Spayed or Neutered</span><br><input list="spay" placeholder="Select One" id="spay-choice" name="dogSpay" />
-                <datalist id="spay">
-                    <option value="Yes">
-                    <option value="No">
-                </datalist><br>
-                <input id="petSubmitBtn" type="submit">
-            </form>
-        </section>
-    </section>
 
 
         <footer>

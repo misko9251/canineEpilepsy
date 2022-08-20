@@ -5,6 +5,7 @@ const passport = require('passport');
 const homeRouter = require('./routes/home');
 const petRouter = require('./routes/pet');
 const petProfileRouter = require('./routes/petProfile');
+const logRouter = require('./routes/log')
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db');
@@ -37,6 +38,7 @@ app.use(passport.session());
 app.use('/', homeRouter);
 app.use('/petEntry', petRouter);
 app.use('/petProfile', petProfileRouter);
+app.use('/log', logRouter);
 app.use('/auth', require('./routes/auth'));
 
 
