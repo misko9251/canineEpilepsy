@@ -568,7 +568,9 @@ input[type=file]{
 }
 
 .inputsAndTableContainer{
+    padding-top: 5%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     background: rgb(250,106,74);
     background: linear-gradient(90deg, rgba(250,106,74,1) 0%, rgba(162,192,182,1) 68%, rgba(162,192,182,1) 100%);
@@ -579,6 +581,7 @@ input[type=file]{
 table{
     border-collapse: collapse;
     margin: 25px 0;
+    margin: 5%;
     font-size: 0.9em;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);

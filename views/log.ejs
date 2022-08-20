@@ -41,7 +41,7 @@
         </section>
         <section class="inputsAndTableContainer">
             <section class="inputsAndTableContainerOne">
-                <form class="seizureInputs">
+                <form action="/log/postLog" method="POST" class="seizureInputs">
                     <h3>Seizure Entry</h3>
                     <label>Date</label><input type="text" placeholder="Date *" name="seizureDate">
                     <label>Time</label><input type="text" placeholder="Time *" name="seizureTime">
@@ -55,6 +55,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th></th>
                             <th>Date</th>
                             <th>Time</th>
                             <th>Length</th>
@@ -62,9 +63,16 @@
                             <th>Person</th>
                         </tr>
                     </thead>
-                    <tr>
-                        <td>Today</td>
-                    </tr>
+                    <% myPosts.forEach((item)=> { %>
+                        <tr>
+                            <td><i class="fa-solid fa-circle-minus"></i></td>
+                            <td><%= item.date %></td>
+                            <td><%= item.time %></td>
+                            <td><%= item.length %></td>
+                            <td><%= item.observation %></td>
+                            <td><%= item.person %></td>
+                        </tr>
+                   <% }) %>
                 </table>
             </section>
         </section>
