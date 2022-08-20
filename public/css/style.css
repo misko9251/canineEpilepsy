@@ -513,24 +513,65 @@ input[type=file]{
 }
 
 .seizureInputs{
-    border: 1px solid black;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    padding: 2%;
+    padding: 0 5%;
+    margin: 5%
+}
+
+.seizureInputs input[type=text]{
+    border: 1px solid rgb(158, 155, 155);
+    border-radius: 25px;
+    height: 20px;
+    padding-left: 2%;
+}
+
+.seizureInputs input[type=submit]{
+    margin: 6% 0;
+    background-color: rgb(129, 201, 175);
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    cursor: pointer;
+}
+.seizureInputs input[type=submit]:hover{
+    background-color: rgb(162, 192, 182);
+}
+
+.seizureInputs label{
+    padding-left: 2%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.seizureInputs input::placeholder, .seizureInputs textarea::placeholder {
+    padding-left: 2%;
+    font-size: 100%;
+}
+
+.seizureInputs textarea{
+    border: 1px solid rgb(158, 155, 155);
+}
+
+.seizureInputs h3{
+    font-size: 30px;
+    padding: 5%;
+    padding-left: 2%;
+    margin-top: 3%;
 }
 
 .inputsAndTableContainerOne{
     width: 40%;
 }
 
-/* .inputsAndTableContainerTwo{
-    width: 60%;
-} */
-
 .inputsAndTableContainer{
     display: flex;
     justify-content: space-around;
+    background: rgb(250,106,74);
+    background: linear-gradient(90deg, rgba(250,106,74,1) 0%, rgba(162,192,182,1) 68%, rgba(162,192,182,1) 100%);
 }
 
 /* Table */
@@ -544,14 +585,17 @@ table{
 }
 
 table thead tr {
-    background-color: #009879;
-    /* background-color: rgb(250, 106, 74); */
+    background-color: rgb(250, 106, 74);
     color: #ffffff;
     text-align: left;
 }
 
 table td, table th {
     padding: 12px 15px;
+}
+
+td{
+    background: white;
 }
 
 /* End Table */
