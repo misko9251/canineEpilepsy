@@ -28,6 +28,46 @@
             <a href="/auth/logout"><li>Log Out</li></a>
         </ul>
     </nav>
+    <header class="logHeader">
+        <section>
+            <h1>EPILEPSY</h1>
+            <h3>Seizure Log</h3>
+        </section>
+    </header>
+    <section>
+        <section class="dogNameAndInstruction">
+            <h4>Ozzy's Seizure Activity</h4>
+            <p>All sections should be completed for each seizure that occurs.</p>
+        </section>
+        <section class="inputsAndTableContainer">
+            <section class="inputsAndTableContainerOne">
+                <form class="seizureInputs">
+                    <label>Date</label><input type="text" placeholder="Date *" name="seizureDate">
+                    <label>Time</label><input type="text" placeholder="Time *" name="seizureTime">
+                    <label>Length</label><input type="text" placeholder="Length of Seizure (seconds) *" name="seizureLength">
+                    <label>Observations</label><textarea type="text" rows="3" cols="20" placeholder="Seizure Observations" name="seizureObservations" maxlength="100"></textarea>
+                    <label>Person</label><input type="text" placeholder="Person Making Observation *" name="seizureObservor">
+                    <input type="submit">
+                </form>
+            </section>
+            <section class="inputsAndTableContainerTwo">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Length</th>
+                            <th>Observations</th>
+                            <th>Person</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Today</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </section>
 
 
 

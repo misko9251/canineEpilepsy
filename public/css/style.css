@@ -91,7 +91,7 @@ li:hover{
 }
 
 
-header{
+.indexHeader{
     height: 600px;
     background-image: url('/photos/newHeader.jpg');
     background-size: cover;
@@ -102,7 +102,7 @@ header{
     align-items: flex-end;
 }
 
-header h1{
+.indexHeader h1{
     font-family: 'Montserrat', sans-serif;
     color: rgb(19, 18, 18);
     font-weight: bolder;
@@ -111,7 +111,7 @@ header h1{
     color: white;
 }
 
-header p{
+.indexHeader p{
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     color: white;
@@ -469,83 +469,89 @@ input[type=file]{
     font-size: 15px;
 }
 
-/* Media Queries */
+/* Log */
 
-/* @media all and (max-width: 575px){
-    .headerSectionMainPage{
-        width: 100%;
-        padding: 0;
-    }
-    header h1{
-        font-size: 50px;
-        text-align: center;
-        padding: 3%;
-    }
-    header p{
-        font-size: 25px;
-    }
-    .epilepsyParagraphInfo{
-        font-size: 15px;
-    }
-    .epilepsyInfo > h1, .healthSpan{
-        font-size: 25px;
-        padding: 0 5%;
-    }
-    .greenFAQ{
-        font-size: 12px;
-        padding: 5%;
-    }
+.logHeader{
+    background-image: url('/photos/log.jpg');
+    height: 300px;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(238, 234, 234, 0.541);
+    border: none;
+    /* border-top: 1px solid black; */
+    color: rgb(250, 106, 74);
 }
 
-@media all and (max-width: 490px){
-    .headerSectionMainPage{
-        width: 100%;
-        padding: 0;
-    }
-    header h1{
-        font-size: 50px;
-        text-align: center;
-        padding: 3%;
-    }
-    header p{
-        font-size: 25px;
-    }
-    nav, footer{
-        font-size: 10px;
-    }
+.dogNameAndInstruction{
+    text-align: center;
+    font-size: 20px;
+    padding: 3%;
 }
 
-@media all and (max-width: 432px){
-    .headerSectionMainPage{
-        width: 100%;
-        padding: 0;
-    }
-    header h1{
-        font-size: 45px;
-        text-align: center;
-        padding: 3%;
-    }
-    header p{
-        font-size: 25px;
-    }
-    nav, footer{
-        font-size: 10px;
-    }
+.logHeader > section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 10%;
+    font-size: 55px;
 }
-@media all and (max-width: 380px){
-    .headerSectionMainPage{
-        width: 100%;
-        padding: 0;
-    }
-    header h1{
-        font-size: 45px;
-        text-align: center;
-        padding: 3%;
-    }
-    header p{
-        font-size: 20px;
-    }
-    nav, footer{
-        font-size: 10px;
-    }
+
+.logHeader > section > h1{
+    font-weight: bolder;
+}
+
+.logHeader > section > h1 + h3{
+    color: white;
+    font-size: 20px;
+    margin-top: 2%;
+    background-color: rgb(250, 106, 74);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1%;
+}
+
+.seizureInputs{
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.inputsAndTableContainerOne{
+    width: 40%;
+}
+
+/* .inputsAndTableContainerTwo{
+    width: 60%;
 } */
+
+.inputsAndTableContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Table */
+
+table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+    background-color: #009879;
+    /* background-color: rgb(250, 106, 74); */
+    color: #ffffff;
+    text-align: left;
+}
+
+table td, table th {
+    padding: 12px 15px;
+}
+
+/* End Table */
