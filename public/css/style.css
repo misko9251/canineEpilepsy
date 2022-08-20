@@ -526,7 +526,7 @@ input[type=file]{
     border: 1px solid rgb(158, 155, 155);
     border-radius: 25px;
     height: 20px;
-    padding-left: 2%;
+    padding-left: 4%;
 }
 
 .seizureInputs input[type=submit]{
@@ -548,7 +548,6 @@ input[type=file]{
 }
 
 .seizureInputs input::placeholder, .seizureInputs textarea::placeholder {
-    padding-left: 2%;
     font-size: 100%;
 }
 
@@ -567,6 +566,10 @@ input[type=file]{
     width: 40%;
 }
 
+.inputsAndTableContainerTwo{
+    padding-top: 2%;
+}
+
 .inputsAndTableContainer{
     padding-top: 5%;
     display: flex;
@@ -580,8 +583,8 @@ input[type=file]{
 
 table{
     border-collapse: collapse;
-    margin: 25px 0;
-    margin: 5%;
+    /* margin: 25px 0; */
+    /* margin: 5%; */
     font-size: 0.9em;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
