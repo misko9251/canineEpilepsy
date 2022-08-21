@@ -1,10 +1,12 @@
-const Seizure = require('../models/Seizures')
+const Seizure = require('../models/Seizures');
+const Pet = require('../models/Pet');
 
 module.exports = {
     loadPage: async (req, res) => {
         try {
-            const posts = await Seizure.find({userId: req.user.userId})
-            res.render('log.ejs', {myPosts: posts, user: req.user})
+            const posts = await Seizure.find({userId: req.user.userId});
+            const pet = await Pet.find({userId: req.user.userId});
+            res.render('log.ejs', {myPosts: posts, user: req.user, myPet: pet});
         } catch (error) {
             
         }

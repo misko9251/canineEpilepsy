@@ -8,6 +8,10 @@ const PostSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    userId: {
+        type: String,
+        required: true
     }
 })
 

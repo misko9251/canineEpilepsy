@@ -5,7 +5,7 @@ module.exports = {
     getProfilePage: async (req, res) =>{
         try {
             const pet = await Pet.find({userId: req.user.userId});
-            const posts = await Post.find({userId: req.userId}).sort({date: -1});
+            const posts = await Post.find({userId: req.user.userId}).sort({date: -1});
             res.render('petProfile.ejs', {myPet: pet, user: req.user, myPosts: posts})
         } catch (error) {
             console.log(error)
@@ -13,7 +13,7 @@ module.exports = {
     },
     addPost: async (req, res) =>{
         try {
-            await Post.create({post: req.body.post})
+            await Post.create({post: req.body.post, userId: req.user.userId})
             res.redirect('/petProfile')
         } catch (error) {
             console.log(error)
@@ -31,8 +31,9 @@ module.exports = {
     sortOldest: async (req, res) =>{
         try {
             const pet = await Pet.find({userId: req.user.userId});
-            const posts = await Post.find({userId: req.userId}).sort({date: 1});
+            const posts = await Post.find({userId: req.user.userId}).sort({date: 1});
             res.render('petProfile.ejs', {myPet: pet, user: req.user, myPosts: posts})
+            console.log(posts)
         } catch (error) {
             console.log(error)
         }

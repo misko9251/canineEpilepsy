@@ -44,15 +44,17 @@
 
     <section class="petProfileContainer">
         <section class="fbPost" >
-            <form action="/petProfile/addPost" method="POST">
-                <textarea id="textAreaPost" type="text" rows="5" cols="60" placeholder="Hi, <%= myPet[0].name %>! What did you do today?" name="post" maxlength="100"></textarea><br>
-                <div class="counterAndBtn"><input type="submit" value="Post"><span id="counter">0/100</span></div>
-            </form>
+            <div class="textAreaContainer">
+                <form action="/petProfile/addPost" method="POST">
+                    <textarea id="textAreaPost" type="text" rows="4" cols="50" placeholder="Hi, <%= myPet[0].name %>! What did you do today?" name="post" maxlength="100"></textarea><br>
+                    <div class="counterAndBtn"><input type="submit" value="Post"><span id="counter">0/100</span></div>
+                </form>
+            </div>
             <section>
                 <h1 class="petNamePosts"><%= myPet[0].name%>'s Five Latest Posts</h1>
                 <div class="sort">
-                    <a href="/petProfile/sortOldest"><div class="oldest">Sort by Oldest</div></a>
-                    <a href="/petProfile"><div class="newest">Sort by Newest</div></a>
+                    <a href="/petProfile/sortOldest"><div class="oldest">Older</div></a>
+                    <a href="/petProfile"><div class="newest">Newer</div></a>
                 </div>
             </section>
             <% for(let i = 0; i < myPosts.length; i++){ %>
