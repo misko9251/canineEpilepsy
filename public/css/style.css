@@ -140,6 +140,7 @@ li:hover{
     padding-top: 5%;
     background-color: rgb(245 108 65);
     border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.288);
 }
 
 .epilepsyInfo h2{
@@ -192,7 +193,7 @@ li:hover{
     padding: 0 15%;
 }
 
-.epilepsyInfo button{
+.google{
     width: 100%;
     height: 30px;
     border-radius: 5px;
@@ -201,16 +202,35 @@ li:hover{
     cursor: pointer;
     color: white;
     font-size: 15px;
+    margin-bottom: 3%;
 }
 
-.epilepsyInfo button:hover{
+.microsoft{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(85, 85, 85);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 3%;
+}
+
+.google:hover{
     background-color: rgb(80, 150, 241);
+}
+.microsoft:hover{
+    background-color: rgb(109, 108, 108);
 }
 
 .fa-google{
     padding-right: 3%;
 }
 
+.fa-microsoft{
+    padding-right: 3%;
+}
 
 /* Instructions */
 
