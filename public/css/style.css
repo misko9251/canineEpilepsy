@@ -240,6 +240,13 @@ li:hover{
     padding-right: 3%;
 }
 
+.btn-block{
+    margin-bottom: 3%;
+}
+
+.loginCenter{
+    text-align: center;
+}
 
 /* Instructions */
 

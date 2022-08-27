@@ -10,7 +10,7 @@ router.get('/', ensureGuest, homeController.getHomePage);
 router.get('/login', ensureGuest, homeController.getLoginPage);
 
 router.post('/loginLocal', 
-  passport.authenticate('local', { failureRedirect: '/' }),
+  passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }),
   async function(req, res) {
     // Successful authentication, redirect based on whether survey was filled out.
     const pet = await Pet.find({userId: req.user.userId})
