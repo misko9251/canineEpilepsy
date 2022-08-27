@@ -217,6 +217,18 @@ li:hover{
     margin-bottom: 3%;
 }
 
+.register{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(8, 7, 7);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 3%;
+}
+
 .google:hover{
     background-color: rgb(80, 150, 241);
 }
@@ -224,13 +236,10 @@ li:hover{
     background-color: rgb(109, 108, 108);
 }
 
-.fa-google{
+.fa-google, .fa-user-plus, .fa-microsoft{
     padding-right: 3%;
 }
 
-.fa-microsoft{
-    padding-right: 3%;
-}
 
 /* Instructions */
 

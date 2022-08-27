@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const flash = require('connect-flash');
 const passport = require('passport');
 const homeRouter = require('./routes/home');
 const petRouter = require('./routes/pet');
 const petProfileRouter = require('./routes/petProfile');
-const logRouter = require('./routes/log')
+const logRouter = require('./routes/log');
+const registerRouter = require('./routes/register');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db');
@@ -35,10 +37,20 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Connect flash
+app.use(flash())
+
+// Global var
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg');
+  next();
+})
+
 app.use('/', homeRouter);
 app.use('/petEntry', petRouter);
 app.use('/petProfile', petProfileRouter);
 app.use('/log', logRouter);
+app.use('/register', registerRouter);
 app.use('/auth', require('./routes/auth'));
 
 

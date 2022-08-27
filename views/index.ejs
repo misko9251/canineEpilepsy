@@ -39,7 +39,7 @@
         <div class="infoFrame">
             <section class="epilepsyInfo">
                 <h2>Sign In</h2>
-                    <form class="signInForm">
+                    <form class="signInForm" action="/loginLocal" method="POST">
                         <input type="text" placeholder="Email Address *" name="email">
                         <input type="password" placeholder="Password *" name="password">
                         <input type="submit" value="Sign In">
@@ -47,7 +47,8 @@
                 <p>or use one of your accounts below</p>
                 <a href="/auth/google"><div><button class="google"><i class="fa-brands fa-google"></i> Sign in with Google</button></div></a>
                 <a href="/auth/login"><div><button class="microsoft"><i class="fa-brands fa-microsoft"></i> Sign in with Microsoft</button></div></a>
-                <p>Dont have an account? Sign up here!</p>    
+                <p>Dont have an account? Register below!</p>
+                <a href="/register"><div><button class="register"><i class="fa-solid fa-user-plus"></i></i>Register</button></div></a>    
             </section>
         </div>
 
