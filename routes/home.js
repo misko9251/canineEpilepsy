@@ -6,13 +6,19 @@ const Pet = require('../models/Pet');
 const homeController = require('../controllers/home');
 const { ensureAuth, ensureGuest } = require('../middleware/auth');
 
-router.get('/', homeController.getHomePage);
+router.get('/', ensureGuest, homeController.getHomePage);
+router.get('/login', ensureGuest, homeController.getLoginPage);
 
-router.post('/loginLocal', (req, res, next) => {
-    passport.authenticate('local', {
-      successRedirect: '/petEntry',
-      failureRedirect: '/',
-      failureFlash: true
-    })(req, res, next);
+router.post('/loginLocal', 
+  passport.authenticate('local', { failureRedirect: '/' }),
+  async function(req, res) {
+    // Successful authentication, redirect based on whether survey was filled out.
+    const pet = await Pet.find({userId: req.user.userId})
+    if(pet.length >= 1){
+      res.redirect('/petProfile')
+    }else{
+      res.redirect('/petEntry');
+    }
   });
+
 module.exports = router;

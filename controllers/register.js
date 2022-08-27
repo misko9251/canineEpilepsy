@@ -61,7 +61,7 @@ module.exports = {
                         newUser.save()
                         .then(user => {
                             req.flash('success_msg', 'You are now registered, please login!');
-                            res.redirect('/')
+                            res.redirect('/login')
                         })
                         .catch(err => console.log(err))
                 }))
