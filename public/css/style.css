@@ -138,7 +138,7 @@ li:hover{
 
 .epilepsyInfo{
     padding-top: 5%;
-    background-color: rgb(245 108 65);
+    background-color: rgb(102, 99, 98);
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.288);
 }
@@ -174,7 +174,9 @@ li:hover{
 }
 
 .signInForm input[type=submit] {
-    background:rgb(159, 232, 241);
+    background:white;
+    font-size: 14px;
+    color: black;
     border: none;
     cursor: pointer;
 }
@@ -197,7 +199,7 @@ li:hover{
     width: 100%;
     height: 30px;
     border-radius: 5px;
-    background-color: rgb(55, 132, 230);
+    background-color: rgb(226, 72, 63);
     border: none;
     cursor: pointer;
     color: white;
@@ -205,11 +207,11 @@ li:hover{
     margin-bottom: 3%;
 }
 
-.microsoft{
+.facebook{
     width: 100%;
     height: 30px;
     border-radius: 5px;
-    background-color: rgb(85, 85, 85);
+    background-color: rgb(5, 118, 227);
     border: none;
     cursor: pointer;
     color: white;
@@ -221,23 +223,27 @@ li:hover{
     width: 100%;
     height: 30px;
     border-radius: 5px;
-    background-color: rgb(8, 7, 7);
+    background-color: rgb(48, 44, 44);
     border: none;
     cursor: pointer;
     color: white;
     font-size: 15px;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
+}
+
+.register:hover{
+    background-color: rgb(80, 76, 76);
 }
 
 .google:hover{
-    background-color: rgb(80, 150, 241);
+    background-color: rgb(214, 90, 84);
 }
-.microsoft:hover{
-    background-color: rgb(109, 108, 108);
+.facebook:hover{
+    background-color: rgb(39, 141, 236);
 }
 
-.fa-google, .fa-user-plus, .fa-microsoft{
-    padding-right: 3%;
+.fa-google, .fa-user-plus, .fa-facebook{
+    padding-right: 1%;
 }
 
 .btn-block{

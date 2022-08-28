@@ -22,10 +22,15 @@
         <a href="/"><h4>MY CANINE COMPANION</h4></a>
         <ul>
             <a href="/aboutUs"><li>About Us</li></a>
-            <a href="/log"><li>Epi-Dog-Log</li></a>
-            <a href="/petProfile"><li>Pet Profile</li></a>
-            <a href="/login"><li>Login</li></a>
-            <a href="/auth/logout"><li>Log Out</li></a>
+            <% if(typeof user == 'undefined') { %>
+                <a href="/login"><li>Login</li></a>
+                <a href="/register"><li>Register</li></a>
+            <%}else{ %>
+                <a href="/log"><li>Epi-Dog-Log</li></a>
+                <a href="/petProfile"><li>Pet Profile</li></a>
+                <a href="/text"><li>Text Reminders</li></a>
+                <a href="/auth/logout"><li>Log Out</li></a>
+           <% }%>
         </ul>
     </nav>
         <div class="headerFrame">
@@ -45,8 +50,8 @@
                         <input type="submit" value="Sign In">
                     </form>
                 <p>or use one of your accounts below</p>
-                <a href="/auth/google"><div><button class="google"><i class="fa-brands fa-google"></i> Sign in with Google</button></div></a>
-                <a href="/auth/login"><div><button class="microsoft"><i class="fa-brands fa-microsoft"></i> Sign in with Microsoft</button></div></a>
+                <a href="/auth/google"><div><button class="google"><i class="fa-brands fa-google"></i> Continue with Google</button></div></a>
+                <a href="/auth/facebook"><div><button class="facebook"><i class="fa-brands fa-facebook"></i> Continue with Facebook</button></div></a>
                 <p>Dont have an account? Register below!</p>
                 <a href="/register"><div><button class="register"><i class="fa-solid fa-user-plus"></i></i>Register</button></div></a>    
             </section>

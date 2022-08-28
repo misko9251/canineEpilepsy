@@ -1,6 +1,5 @@
 const express = require('express');
 const passport = require('passport');
-const config = require('../config/config');
 const router = express.Router();
 const Pet = require('../models/Pet');
 const homeController = require('../controllers/home');
